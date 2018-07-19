@@ -17,26 +17,13 @@ const schools =
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-const terrains =
-[
-  `Mountains`,
-  `Fields`,
-  `Lake`,
-  `Glacier`,
-  `Fog`,
-  `Storm`,
-  `Volcano`,
-  `Caves`,
-]
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 const rules =
 [
   `For 2 players.`,
   `Each player uses a deck of 30 cards.`,
   `A deck can hold up to 3 copies of each card.`,
   `A deck can hold only 1 copy of each EXOTIC card.`,
+  `A deck can hold only 1 copy of each TERRAIN card.`,
 
   `Each player draws 5 cards to start.`,
   `The first player (usually youngest) plays first without drawing additional cards.`,
@@ -45,31 +32,11 @@ const rules =
   `In a standard card draw phase a player draws cards until s/he has 5 in hand.`,
   `Unused cards remain in hand for the next turn.`,
   `Each player may hold up to 10 cards in hand.`,
-  `Excess cards are recycled without going in hand.`,
-  `When the draw pile is empty, shuffle the recycle pile and make it the deck. Keep drawing if that is the case.`,
+  `Excess cards are discarded without going in hand.`,
+  `If a deck reaches 0 cards, the related player loses.`,
 
-  `Only 1 terrain may be active in a match.`,
-  `When another terrain is placed by any player, the former is destroyed.`,
-
-  `Assist cards are limited to 2 slots, they're the representation of the fighter's left and right hands.`,
-  `Only 1 assist may exist in a slot. Placing another in the occupied slot will destroy the previous one.`,
-  `Some assists may use both slots. These are destroyed if either slot is replaced.`,
-  `If the assist is a GUARDIAN, the attacker is forced to go through it first.`,
-
-  `Assists have a SHIELD value that works mostly like a DEFENSE value.`,
-  `When a foe's attack is equal to or greater than the shield, the assist is recycled.`,
-  `Attacking an assist means making another attack line just for it.`,
-  `Players may choose which line to use when addressing effects based on them.`,
-
-  `Standard matches are 5 hit knockouts.`,
-  `Hits are ATTACKS that were not completely blocked by DEFENSES.`,
-
-  `Some cards are based on a card flip. The content is the FACE, behind is the BACK.`,
-
-  `Every time a card enters the deck or is selected out, it gets shuffled.`,
-
-  `Cards should be played facing the foe so s/he can have a better reading of the play.`,
-  `This is mainly important in cards with "or" effects`,
+  `Only 1 terrain may be active at a time.`,
+  `When another terrain is placed, the former is destroyed.`,
 ]
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -78,19 +45,15 @@ const concepts =
 [
   {
     id: `complete`,
-    text: `When a card acts fully, excluding "or" effects.`,
+    text: `When a card meets all requirements.`,
   },
   {
     id: `combo complete`,
-    text: `When every card in a combo acts fully, excluding "or" effects.`,
+    text: `When every card in a combo meets all requirements.`,
   },
   {
-    id: `recycle`,
-    text: `Card goes to the recycle pile.`,
-  },
-  {
-    id: `restore`,
-    text: `Card goes to the deck.`,
+    id: `discard`,
+    text: `Card goes to the discard pile.`,
   },
   {
     id: `destroy`,
@@ -110,97 +73,51 @@ const concepts =
   },
   {
     id: `attack`,
-    text: `The total amount of damage a player delivers in line.`,
+    text: `The total amount of damage a player delivers in a turn.`,
   },
   {
     id: `defense`,
-    text: `The total amount of damage a player absorbs in line`,
-  },
-  {
-    id: `spell`,
-    text: `Play in line along with attacks and defenses but is neither.`,
+    text: `The total amount of damage a player absorbs in a turn.`,
   },
   {
     id: `terrain`,
     text: `Plays off line until it is destroyed.`,
   },
   {
-    id: `shield`,
-    text: `The total amount of damage an assist card absorbs in a turn.`,
+    id: `spell`,
+    text: `Goes to discard pile after use.`,
   },
   {
-    id: `guardian`,
-    text: `Only assists can be guardians. The foe's ATTACK is forced to pass through a guardian first.`,
+    id: `equip`,
+    text: `Plays off line for 1 round.`,
   },
   {
-    id: `assist`,
-    text: `Equipments or minions that assist in battle off line.`,
+    id: `poison`,
+    text: `Poison adds to ATTACK then is floor-halved each time.`,
   },
   {
-    id: `needs`,
-    text: `Some cards can only be played under strict conditions.`,
-  },
-  {
-    id: `frail`,
-    text: `Destroyed after use.`,
-  },
-  {
-    id: `fast`,
-    text: `Restored after use.`,
-  },
-  {
-    id: `poisoned`,
-    text: `?`,
-  },
-  {
-    id: `burnt`,
+    id: ``,
     text: ``,
   },
-  {
-    id: `bleeding`,
-    text: `?`,
-  },
-  {
-    id: `dizzy`,
-    text: `?`,
-  },
 ]
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-const deck0 =
-[
-  [3, `Mountains`],
-  [3, `Pebble Shot`],
-  [2, `Pebble Followup`],
-  [1, `Pebble Barrage`],
-  [3, `Rolling Pebbles`],
-  [3, `Pebble Dust Surprise`],
-  [2, `Malachite Gauntlet`],
-  [2, `Marble Goat Keeper`],
-  [1, `Multi Core Wall`],
-  [1, `Abyssal Hammer`],
-  [1, `Smitherinity`],
-  [3, `Dwarven Courrier`],
-  [3, `Magma Ball`],
-  [2, `Magma Splurge`],
-]
+const cards = {}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-const cards =
+cards.rock =
 [
   //....................................................................................................................
   {
-    id: ``,
-    type: ``,
-    school: ``,
-    exotic: false,
-    shield: 0,
-    hands: 0,
+    id: `Fast Ball`,
+    type: `skill`,
+    school: `rock`,
     texts:
     [
-      ``,
+      `+6 ATTACK.`,
+      `+3 ATTACK if at "Mountains".`,
     ],
   },
   //....................................................................................................................
@@ -208,7 +125,6 @@ const cards =
     id: `Mountains`,
     type: `terrain`,
     school: `rock`,
-    exotic: false,
     texts:
     [
       `Cannot be destroyed in its 1st round.`,
@@ -216,357 +132,270 @@ const cards =
   },
   //....................................................................................................................
   {
-    id: `Pebble Shot`,
-    type: `attack`,
+    id: ``,
+    type: ``,
     school: `rock`,
-    exotic: false,
     texts:
     [
-      `+4 ATTACK.`,
-      `+3 ATTACK if at "Mountains".`,
+      ``,
     ],
   },
-  //....................................................................................................................
-  {
-    id: `Pebble Followup`,
-    type: `attack`,
-    school: `rock`,
-    exotic: false,
-    texts:
-    [
-      `+7 ATTACK if after "Pebble Shot".`,
-      `+3 ATTACK if at "Mountains".`,
-    ],
-  },
-  //....................................................................................................................
-  {
-    id: `Pebble Barrage`,
-    type: `attack`,
-    school: `rock`,
-    exotic: false,
-    texts:
-    [
-      `+10 ATTACK if after "Pebble Followup".`,
-      `+3 ATTACK if at "Mountains".`,
-    ],
-  },
-  //....................................................................................................................
-  {
-    id: `Rolling Pebbles`,
-    type: `defense`,
-    school: `rock`,
-    exotic: false,
-    texts:
-    [
-      `+5 DEFENSE.`,
-      `+3 ATTACK if at "Mountains".`,
-    ],
-  },
-  //....................................................................................................................
-  {
-    id: `Pebble Dust Surprise`,
-    type: `defense`,
-    school: `rock`,
-    exotic: false,
-    texts:
-    [
-      `+4 DEFENSE per "Pebble".`,
-    ],
-  },
-  //....................................................................................................................
-  {
-    id: `Malachite Gauntlet`,
-    type: `assist`,
-    school: `rock`,
-    exotic: false,
-    shield: 4,
-    hands: 1,
-    texts:
-    [
-      `+1 DEFENSE per card in hand or +1 ATTACK per card in line.`,
-    ],
-  },
-  //....................................................................................................................
-  {
-    id: `Marble Goat Keeper`,
-    type: `assist`,
-    school: `rock`,
-    exotic: false,
-    shield: 6,
-    hands: 1,
-    texts:
-    [
-      `GUARDIAN.`,
-      `+1 SHIELD per rock card in every line.`,
-      `+3 SHIELD if at "Mountains".`,
-    ],
-  },
-  //....................................................................................................................
-  {
-    id: `Multi Core Wall`,
-    type: `assist`,
-    school: `rock fire`,
-    exotic: true,
-    shield: 20,
-    hands: 2,
-    texts:
-    [
-      `GUARDIAN.`,
-      `Needs to destroy own active "Mountains" or "Volcano".`,
-    ],
-  },
-  //....................................................................................................................
-  {
-    id: `Abyssal Hammer`,
-    type: `assist`,
-    school: `rock metal`,
-    exotic: true,
-    shield: 6,
-    hands: 2,
-    texts:
-    [
-      `Needs active "Mountains" or "Caves".`,
-      `+17 ATTACK.`,
-    ],
-  },
-  //....................................................................................................................
-  {
-    id: `Smitherinity`,
-    type: `spell`,
-    school: `fire metal`,
-    exotic: true,
-    texts:
-    [
-      `FRAIL.`,
-      `Select any assist from your draw pile, equip it ignoring needs.`,
-    ],
-  },
-  //....................................................................................................................
-  {
-    id: `Dwarven Courrier`,
-    type: `spell`,
-    school: `rock metal`,
-    exotic: false,
-    texts:
-    [
-      `Draw 1 card.`,
-      `Draw 1 card if FACE.`,
-      `FAST if at "Mountains" or "Caves".`,
-    ],
-  },
-  //....................................................................................................................
-  {
-    id: `Magma Ball`,
-    type: `attack`,
-    school: `rock fire`,
-    exotic: false,
-    texts:
-    [
-      `+5 ATTACK`,
-      `+5 ATTACK if you destroy 1 rock or fire card from your hand.`,
-    ],
-  },
-  //....................................................................................................................
-  {
-    id: `Magma Splurge`,
-    type: `attack`,
-    school: `rock fire`,
-    exotic: false,
-    shield: 0,
-    hands: 0,
-    texts:
-    [
-      `+8 ATTACK and +5 DEFENSE if after "Magma Ball".`,
-    ],
-  },
-  /*
-  //....................................................................................................................
-  {
-    id: `Plate Shield`,
-    type: `defense`,
-    school: `rock`,
-    exotic: false,
-    texts:
-    [
-      `+5 DEFENSE.`,
-    ],
-  },
-  //....................................................................................................................
-  {
-    id: `Brute Cover`,
-    type: `defense`,
-    school: `rock`,
-    exotic: false,
-    texts:
-    [
-      `+3 DEFENSE per rock cards in line.`,
-      `+3 DEFENSE if at "Mountains".`,
-    ],
-  },
-  //....................................................................................................................
-  {
-    id: `Smash Bash`,
-    type: `attack`,
-    school: `rock`,
-    exotic: false,
-    texts:
-    [
-      `+3 ATTACK per rock attack cards in line.`,
-    ],
-  },
-  //....................................................................................................................
-  {
-    id: `Canyon Charge`,
-    type: `spell`,
-    school: `rock`,
-    exotic: true,
-    shield: 0,
-    hands: 0,
-    texts:
-    [
-      `DESTROY after use.`,
-      `Draw the floor-halved number of rock cards in line.`,
-    ],
-  },
-  //....................................................................................................................
-  {
-    id: `Malachite Gauntlet`,
-    type: `equip`,
-    school: `rock`,
-    exotic: false,
-    shield: 0,
-    hands: 0,
-    texts:
-    [
-      `+1 DEFENSE per defense card in line.`,
-      `+1 ATTACK per attack card in line.`,
-    ],
-  },
-  //....................................................................................................................
-  {
-    id: `Magma Coat`,
-    type: `spell`,
-    school: `fire`,
-    exotic: false,
-    shield: 0,
-    hands: 0,
-    texts:
-    [
-      `Destroy 1 rock card in your hand for +10 defense.`,
-    ],
-  },
-  //....................................................................................................................
-  {
-    id: `Simple Twist`,
-    type: `skill`,
-    school: `air`,
-    exotic: false,
-    shield: 0,
-    hands: 0,
-    texts:
-    [
-      `+4 DEFENSE.`,
-      `Draw 1 card if 0 air cards in line.`,
-    ],
-  },
-  //....................................................................................................................
-  {
-    id: `Sharded Polyprism`,
-    type: `skill`,
-    school: `rock`,
-    exotic: true,
-    shield: 0,
-    hands: 0,
-    texts:
-    [
-      `Destroy N rock cards for +4N ATTACK.`,
-    ],
-  },
-  //....................................................................................................................
-  {
-    id: `Chain Mower`,
-    type: `spell`,
-    school: `rock`,
-    exotic: true,
-    shield: 0,
-    hands: 0,
-    texts:
-    [
-      `DESTROY an active "Mountains" or itself after use.`,
-      `recycle the last card of any combo.`,
-    ],
-  },
-  //....................................................................................................................
-  {
-    id: `Opalite Scout Despair`,
-    type: `spell`,
-    school: `rock`,
-    exotic: false,
-    shield: 0,
-    hands: 0,
-    texts:
-    [
-      `Draw 2 cards. Destroy every non rock attack card from the draw.`,
-      `Draw 1 card if at "Mountains".`
-    ],
-  },
-  //....................................................................................................................
-  {
-    id: `Safe Strike`,
-    type: `attack`,
-    school: `attack`,
-    exotic: false,
-    texts:
-    [
-      `+6 ATTACK.`,
-      `+2 DEFENSE.`,
-      `+2 DEFENSE if at "Mountains".`
-    ],
-  },
-  */
 ]
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-const getAmounts = deck =>
-{
-  const types = []
-  const amounts = {}
-
-  deck.map (deckCard =>
+cards.earth =
+[
+  //....................................................................................................................
   {
-    deckCard =
-    {
-      amount: deckCard [0],
-      id: deckCard [1],
-    }
-
-    cards.some (card =>
-    {
-      if (card.id === deckCard.id)
-      {
-        Array
-        .from ({length: deckCard.amount})
-        .forEach (() => types.push (card.type))
-
-        return true
-      }
-    })
-  })
-
-  types.forEach (type =>
+    id: `Vines`,
+    type: `skill`,
+    school: `earth`,
+    texts:
+    [
+      `+4 ATTACK.`,
+      `+4 ATTACK if before an EARTH card.`,
+      `+4 DEFENSE if before an WATER card.`,
+    ],
+  },
+  //....................................................................................................................
   {
-    amounts [type]
-    ? amounts [type] ++
-    : amounts [type] = 1
-  })
+    id: `Forest`,
+    type: `terrain`,
+    school: `earth`,
+    texts:
+    [
+      `Can ONCE change the school of any card to EARTH or WATER for 1 turn.`,
+    ],
+  },
+  //....................................................................................................................
+  {
+    id: ``,
+    type: ``,
+    school: `earth`,
+    texts:
+    [
+      ``,
+    ],
+  },
+]
 
-  amounts.total = Object.values (amounts).reduce ((a, b) => a + b, 0)
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-  return amounts
-}
+cards.water =
+[
+  //....................................................................................................................
+  {
+    id: `Wet Blade`,
+    type: `skill`,
+    school: `water`,
+    texts:
+    [
+      `+3 ATTACK.`,
+      `+3 ATTACK per WATER card in line.`
+    ],
+  },
+  //....................................................................................................................
+  {
+    id: `Lake`,
+    type: `terrain`,
+    school: `water`,
+    texts:
+    [
+      `Can ONCE draw 1 card then discard 1 card.`,
+    ],
+  },
+  //....................................................................................................................
+  {
+    id: ``,
+    type: ``,
+    school: `water`,
+    texts:
+    [
+      ``,
+    ],
+  },
+]
 
-console.table (getAmounts (deck0))
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+cards.ice =
+[
+  //....................................................................................................................
+  {
+    id: ``,
+    type: ``,
+    school: `ice`,
+    texts:
+    [
+      ``,
+    ],
+  },
+  //....................................................................................................................
+  {
+    id: `Glacier`,
+    type: `terrain`,
+    school: `ice`,
+    texts:
+    [
+      ``,
+    ],
+  },
+  //....................................................................................................................
+  {
+    id: ``,
+    type: ``,
+    school: `ice`,
+    texts:
+    [
+      ``,
+    ],
+  },
+]
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+cards.air =
+[
+  //....................................................................................................................
+  {
+    id: ``,
+    type: ``,
+    school: `air`,
+    texts:
+    [
+      ``,
+    ],
+  },
+  //....................................................................................................................
+  {
+    id: `Fog`,
+    type: `terrain`,
+    school: `air`,
+    texts:
+    [
+      ``,
+    ],
+  },
+  //....................................................................................................................
+  {
+    id: ``,
+    type: ``,
+    school: `air`,
+    texts:
+    [
+      ``,
+    ],
+  },
+]
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+cards.spark =
+[
+  //....................................................................................................................
+  {
+    id: ``,
+    type: ``,
+    school: `spark`,
+    texts:
+    [
+      ``,
+    ],
+  },
+  //....................................................................................................................
+  {
+    id: `Storm`,
+    type: `terrain`,
+    school: `spark`,
+    texts:
+    [
+      ``,
+    ],
+  },
+  //....................................................................................................................
+  {
+    id: ``,
+    type: ``,
+    school: `spark`,
+    texts:
+    [
+      ``,
+    ],
+  },
+]
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+cards.fire =
+[
+  //....................................................................................................................
+  {
+    id: ``,
+    type: ``,
+    school: `fire`,
+    texts:
+    [
+      ``,
+    ],
+  },
+  //....................................................................................................................
+  {
+    id: `Volcano`,
+    type: `terrain`,
+    school: `fire`,
+    texts:
+    [
+      ``,
+    ],
+  },
+  //....................................................................................................................
+  {
+    id: ``,
+    type: ``,
+    school: `fire`,
+    texts:
+    [
+      ``,
+    ],
+  },
+]
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+cards.metal =
+[
+  //....................................................................................................................
+  {
+    id: ``,
+    type: ``,
+    school: `metal`,
+    texts:
+    [
+      ``,
+    ],
+  },
+  //....................................................................................................................
+  {
+    id: `Caves`,
+    type: `terrain`,
+    school: `metal`,
+    texts:
+    [
+      ``,
+    ],
+  },
+  //....................................................................................................................
+  {
+    id: ``,
+    type: ``,
+    school: `metal`,
+    texts:
+    [
+      ``,
+    ],
+  },
+]
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
