@@ -1,6 +1,6 @@
 
 ........................................................................................................................
-Basics.
+I. Basics.
 
 1. This is a competitive turn-based card game for 2 players.
 2. Each player must use a deck of 30 cards.
@@ -11,7 +11,7 @@ Basics.
 7. Health is made out of 3 cards named “Heart”.
 
 ........................................................................................................................
-Game flow essentials.
+II. Game flow essentials.
 
 1. The DECK is the 30 selected cards combined.
 2. The HEALTH is the 3 "Heart" cards combined.
@@ -49,7 +49,7 @@ Game flow essentials.
   TIP 6. In a non-standard game more or less "Heart" cards may be used as long as both players have the same amount.
 
 ........................................................................................................................
-Discarding and destroying cards.
+III. Discarding and destroying cards.
 
 1. Some cards get discarded as in most card games. They go to a pile called TRASH.
 2. Trash can be recycled into a new source when the source is emptied.
@@ -58,7 +58,7 @@ Discarding and destroying cards.
 5. If a player at one point has to draw cards but has none in both the SOURCE and the TRASH, it loses.
 
 ........................................................................................................................
-Playing a simulation.
+IV. Playing a simulation.
 
 1. Each card is unique, but their types have some intrinsic behaviours associated to them.
 2. There are 6 card types:
