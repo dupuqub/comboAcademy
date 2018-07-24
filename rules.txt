@@ -125,4 +125,12 @@ Playing a simulation.
   aw. It also means that if more than 8 attack is delivered by P2, "Oak Bark Shield" will be discarded in the process.
   ax. Every defeated assist is discarded, NOT destroyed. Remember that replaced assists are destroyed.
   ay. Assists may have the GUARDIAN status in text. It means it naturally stays in the way of any attack.
-  az. ...
+  az. P2 plays a trap named "Hateful Mates" that says "Destroy the first 1 handed assist played by anyone".
+  ba. Traps are played off line, but P2 is only able to play it because at least 1 of its hand slots are free.
+  bb. Traps share this game feature with assists, but traps always need only 1 hand free.
+  bc. To play a trap without free slots means to destroy the equip in place.
+  bd. P2 plays a 2 handed assist (avoiding its own trap) named "Chainsickle" that says "+2 ATTACK per card in line".
+  be. This is because a player cannot choose when to activate traps.
+  bf. If it can be proven that a player did not activate its trap the first possible time, the player loses the match.
+  bg. And well... This is it for now. If new features arise, this simulation shall grow to accommodate them.
+
