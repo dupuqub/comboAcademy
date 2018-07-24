@@ -72,7 +72,20 @@ Playing a simulation.
 
 3. Attacks, defenses and scrolls are IN LINE cards.
 4. Terrains, assists and traps are OFF LINE cards.
-5. To understand better these cards and their properties let's play a simulation:
+5. Cards also have 1 or 2 schools (were the techniques were developed in lore).
+6. These are the schools and their respective colors and terrains:
+
+  a. Rock  => Magenta => Mountain.
+  b. Earth => Purple  => Swamp.
+  c. Water => Blue    => Lake.
+  d. Ice   => Cyan    => Glacier.
+  e. Air   => Green   => Forest.
+  f. Spark => Yellow  => Desert.
+  g. Fire  => Orange  => Volcano.
+  h. Metal => Red     => Cave.
+
+7. Schools are important to some effects, but schools don't carry special mechanics, so they won't be featured below.
+8. To understand better these cards and their properties let's play a simulation:
 
   a. Suppose it is the 1st turn of the match, and therefore P1 draws 5 cards.
   b. P1 plays 1 attack card. Let's say this is an attack card named "Punch" and it says "+5 ATTACK".
@@ -135,5 +148,9 @@ Playing a simulation.
   bg. P2 plays a 2 handed assist (avoiding its own trap) named "Chainsickle" that says "+2 ATTACK per card in line".
   bh. This is because a player cannot choose when to activate traps.
   bi. If it can be proven that a player did not activate its trap the 1st possible time, the player loses the match.
-  bj. And well... This is it for now. If new features arise, this simulation shall grow to accommodate them.
+  bj. P2 plays an scroll named "Double Edged Cestus" that says "+7 ATTACK or +7 DEFENSE".
+  bk. Every card with "or" effect must be rotated 90 degrees (left or right) to signal which effect was chosen.
+  bl. The options "left" and "right" are written in such effects for clarity.
+  bm. Some cards may have "and" effects along with "or" ones, but the "or" must always only feature 2 possibilities.
+  bn. And well... This is it for now. If new features arise, this simulation shall grow to accommodate them.
 
