@@ -157,7 +157,7 @@ Playing a simulation.
   bp. And well... This is it for now. If new features arise, this simulation shall grow to accommodate them.
 
 9. Players are able to handle every card in every own pile to count them.
-10. Players may not look at the source unless special effects are in place.
+10. Players may read the cards at every own pile, except for the source (unless special effects are activated).
 11. Players may ask for their foe's pile amounts. Some cards may be based in such numbers.
 12. Don't lie and don't cheat.
 
