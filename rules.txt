@@ -151,6 +151,7 @@ Playing a simulation.
   bj. P2 plays an scroll named "Double Edged Cestus" that says "+7 ATTACK or +7 DEFENSE".
   bk. Every card with "or" effect must be rotated 90 degrees (left or right) to signal which effect was chosen.
   bl. The options "left" and "right" are written in such effects for clarity.
-  bm. Some cards may have "and" effects along with "or" ones, but the "or" must always only feature 2 possibilities.
-  bn. And well... This is it for now. If new features arise, this simulation shall grow to accommodate them.
+  bm. The "or" effect choice may be reset every round.
+  bn. Some cards may have "and" effects along with "or" ones, but the "or" must always only feature 2 possibilities.
+  bo. And well... This is it for now. If new features arise, this simulation shall grow to accommodate them.
 
