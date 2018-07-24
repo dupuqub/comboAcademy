@@ -101,38 +101,39 @@ Playing a simulation.
   y. P1 plays a scroll named "Swift Comeback" that says "FAST. Draw 1 card per 10 ATTACK taken".
   z. P1 then draws 2 cards because it is taking 20 damage. P1 has now 6 cards in pool and "Swift Comeback" in line.
   aa. Having the FAST status means that every time the card gets DISCARDED it goes to the bottom of the source.
-  ab. P1 plays 1 assist named "Oak Bark Shield" that says "+2 DEFENSE per card in both pools".
-  ac. P1 plays 1 assist named "Stretch Club" that says "+1 ATTACK per every card in both lines".
-  ad. P1 now has used up all its 2 HAND slots. Assists can only be used if equipped to a hand.
-  ae. Some assists may use up to 2 hands. This number is shown through a closed hand symbol in the card.
-  af. If one assist is equipped on top of another, the older is destroyed, NOT discarded.
-  ag. P1 plays 1 defense named "Elemental Aura" that says "+8 DEFENSE if at any terrain".
-  ah. P1 plays 1 defense named "Recurrent Aura" that says "+2 DEFENSE per defense card in line".
-  ai. P1 finishes its turn. Because both players have 2 cards in pool (total of 4), "Oak Bark Shield" gives 8 defense.
-  aj. "Elemental Aura" gives another 8 defense and "Recurrent Aura" gives 4, for a total of 20 defense.
-  ak. P1 defended perfectly and attacked X from "Stretch Club".
-  al. "Stretch Club" value will change depending on the amount of cards P2 plays because it is an attack card.
-  am. P2 now discards its combo and prepares to defend the X attack (currently 3).
-  an. P2 makes a standard draw of 3 cards.
-  ao. P2 plays an scroll named "Struggling Roots" that says "BURNER. Destroy any assist".
-  ap. Only scrolls can be burners. It means the card is destroyed immediately after its use.
-  aq. P2 uses "Struggling Roots" to destroy "Stretch Club" and consequently has nothing more to defend.
-  ar. P2 still wants to get rid of "Oak Bark Shield", but it will have to use other methods not discussed before.
-  as. Every assist has a SHIELD value. This value works mostly like the player's defense.
-  at. For example, "Oak Bark Shield" has 8 in shield. This number is shown through a shield symbol in the card.
-  au. P2 says to P1 that its line will aim "Oak Bark Shield".
-  av. Players may claim aim at assists before, during or after building the combo.
-  aw. Players may only claim aim at assists before passing the turn.
-  ax. It means that P1 will have 8 extra defense next turn.
-  ay. It also means that if more than 8 attack is delivered by P2, "Oak Bark Shield" will be discarded in the process.
-  az. Every defeated assist is discarded, NOT destroyed. Remember that replaced assists are destroyed.
-  ba. Assists may have the GUARDIAN status in text. It means it naturally stays in the way of any attack.
-  bb. P2 plays a trap named "Hateful Mates" that says "Destroy the 1st 1 handed assist played by anyone".
-  bc. Traps are played off line, but P2 is only able to play it because at least 1 of its hand slots are free.
-  bd. Traps share this game feature with assists, but traps always need only 1 hand free.
-  be. To play a trap without free slots means to destroy the equip in place.
-  bf. P2 plays a 2 handed assist (avoiding its own trap) named "Chainsickle" that says "+2 ATTACK per card in line".
-  bg. This is because a player cannot choose when to activate traps.
-  bh. If it can be proven that a player did not activate its trap the 1st possible time, the player loses the match.
-  bi. And well... This is it for now. If new features arise, this simulation shall grow to accommodate them.
+  ab. P1 plays 1 assist named "Oak Bark Shield" that says "FRAIL. +2 DEFENSE per card in both pools".
+  ac. The frail status means whenever the card would get discarded, it gets destroyed instead.
+  ad. P1 plays 1 assist named "Stretch Club" that says "+1 ATTACK per every card in both lines".
+  ae. P1 now has used up all its 2 HAND slots. Assists can only be used if equipped to a hand.
+  af. Some assists may use up to 2 hands. This number is shown through a closed hand symbol in the card.
+  ag. If one assist is equipped on top of another, the older is destroyed, NOT discarded.
+  ah. P1 plays 1 defense named "Elemental Aura" that says "+8 DEFENSE if at any terrain".
+  ai. P1 plays 1 defense named "Recurrent Aura" that says "+2 DEFENSE per defense card in line".
+  aj. P1 finishes its turn. Because both players have 2 cards in pool (total of 4), "Oak Bark Shield" gives 8 defense.
+  ak. "Elemental Aura" gives another 8 defense and "Recurrent Aura" gives 4, for a total of 20 defense.
+  al. P1 defended perfectly and attacked X from "Stretch Club".
+  am. "Stretch Club" value will change depending on the amount of cards P2 plays because it is an attack card.
+  an. P2 now discards its combo and prepares to defend the X attack (currently 3).
+  ao. P2 makes a standard draw of 3 cards.
+  ap. P2 plays an scroll named "Struggling Roots" that says "BURNER. Destroy any assist".
+  aq. Only scrolls can be burners. It means the card is destroyed immediately after its use.
+  ar. P2 uses "Struggling Roots" to destroy "Stretch Club" and consequently has nothing more to defend.
+  as. P2 still wants to get rid of "Oak Bark Shield", but it will have to use other methods not discussed before.
+  at. Every assist has a SHIELD value. This value works mostly like the player's defense.
+  au. For example, "Oak Bark Shield" has 8 in shield. This number is shown through a shield symbol in the card.
+  av. P2 says to P1 that its line will aim "Oak Bark Shield".
+  aw. Players may claim aim at assists before, during or after building the combo.
+  ax. Players may only claim aim at assists before passing the turn.
+  ay. It means that P1 will have 8 extra defense next turn.
+  az. It also means that if more than 8 attack is delivered by P2, "Oak Bark Shield" will be discarded in the process.
+  ba. Every defeated assist is discarded, NOT destroyed. Remember that replaced assists are destroyed.
+  bb. Assists may have the GUARDIAN status in text. It means it naturally stays in the way of any attack.
+  bc. P2 plays a trap named "Hateful Mates" that says "Destroy the 1st 1 handed assist played by anyone".
+  bd. Traps are played off line, but P2 is only able to play it because at least 1 of its hand slots are free.
+  be. Traps share this game feature with assists, but traps always need only 1 hand free.
+  bf. To play a trap without free slots means to destroy the equip in place.
+  bg. P2 plays a 2 handed assist (avoiding its own trap) named "Chainsickle" that says "+2 ATTACK per card in line".
+  bh. This is because a player cannot choose when to activate traps.
+  bi. If it can be proven that a player did not activate its trap the 1st possible time, the player loses the match.
+  bj. And well... This is it for now. If new features arise, this simulation shall grow to accommodate them.
 
