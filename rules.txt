@@ -111,11 +111,11 @@ IV. Playing a simulation.
   v. P2 passes the turn with still 2 cards in pool. Remember that henceforth every turn is preceded by a standard draw.
   w. P1 now discards the last combo it made then draws 3 cards to complete 5 in pool.
   x. P1 has a terrain called "Forest", but it cannot be played yet because of the "Mountain" effect.
-  y. P1 plays a scroll named "Swift Comeback" that says "FAST. Draw 1 card per 10 ATTACK taken".
+  y. P1 plays a scroll named "Swift Comeback" that says "PHASE. Draw 1 card per 10 ATTACK taken".
   z. P1 then draws 2 cards because it is taking 20 damage. P1 has now 6 cards in pool and "Swift Comeback" in line.
-  aa. Having the FAST status means that every time the card gets DISCARDED it goes to the bottom of the source.
-  ab. P1 plays 1 assist named "Oak Bark Shield" that says "FRAIL. +2 DEFENSE per card in both pools".
-  ac. The frail status means whenever the card would get discarded, it gets destroyed instead.
+  aa. Having the phase status means that every time the card gets DISCARDED it goes to the bottom of the source instead.
+  ab. P1 plays 1 assist named "Oak Bark Shield" that says "CRUMBLE. +2 DEFENSE per card in both pools".
+  ac. The crumble status means whenever the card would get discarded, it gets destroyed instead.
   ad. P1 plays 1 assist named "Stretch Club" that says "+1 ATTACK per every card in both lines".
   ae. P1 now has used up all its 2 HAND slots. Assists can only be used if equipped to a hand.
   af. Some assists may use up to 2 hands. This number is shown through a closed hand symbol in the card.
@@ -128,8 +128,8 @@ IV. Playing a simulation.
   am. "Stretch Club" value will change depending on the amount of cards P2 plays because it is an attack card.
   an. P2 now discards its combo and prepares to defend the X attack (currently 3).
   ao. P2 makes a standard draw of 3 cards.
-  ap. P2 plays an scroll named "Struggling Roots" that says "BURNER. Destroy any assist".
-  aq. Only scrolls can be burners. It means the card is destroyed immediately after its use.
+  ap. P2 plays an scroll named "Struggling Roots" that says "BURN. Destroy any assist".
+  aq. Only scrolls can burn. It means the card is destroyed immediately after its use.
   ar. P2 uses "Struggling Roots" to destroy "Stretch Club" and consequently has nothing more to defend.
   as. P2 still wants to get rid of "Oak Bark Shield", but it will have to use other methods not discussed before.
   at. Every assist has a SHIELD value. This value works mostly like the player's defense.
@@ -140,7 +140,7 @@ IV. Playing a simulation.
   ay. It means that P1 will have 8 extra defense next turn.
   az. It also means that if more than 8 attack is delivered by P2, "Oak Bark Shield" will be discarded in the process.
   ba. Every defeated assist is discarded, NOT destroyed. Remember that replaced assists are destroyed.
-  bb. Assists may have the GUARDIAN status in text. It means it naturally stays in the way of any attack.
+  bb. Assists may have the GUARD status in text. It means it naturally stays in the way of any attack.
   bc. P2 plays a trap named "Hateful Mates" that says "Destroy the 1st 1 handed assist played by anyone".
   bd. Traps are played off line, but P2 is only able to play it because at least 1 of its hand slots are free.
   be. Traps share this game feature with assists, but traps always need only 1 hand free.
