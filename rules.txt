@@ -1,0 +1,128 @@
+
+........................................................................................................................
+Basics.
+
+1. This is a competitive turn-based card game for 2 players.
+2. Each player must use a deck of 30 cards.
+3. Each deck can contain only 3 copies of each card.
+4. Each deck can contain only 1 copy of an exotic card.
+5. Exotic cards have asterisks involving the name.
+6. Each player also has a side deck called HEALTH.
+7. Health is made out of 3 cards named “Heart”.
+
+........................................................................................................................
+Game flow essentials.
+
+1. The DECK is the 30 selected cards combined.
+2. The HEALTH is the 3 "Heart" cards combined.
+3. The full deck starts shuffled, face down and (as alligned as possible) in a pile called SOURCE.
+
+  TIP 1. Remember the deck is NOT the source. Some effects may address one of them, some the other.
+  TIP 2. Remember that "Heart" cards are NOT part of the deck.
+
+4. There is always a challenger and a challenged.
+5. The challenged always plays 1st.
+6. The 1st player (P1) DRAWS 5 cards.
+7. Drawing a card means getting it from the top of the source.
+8. This new pile in the player's hand is named POOL.
+
+  TIP 3. Effects may transfer cards between every pile in the game, but the word DRAW is reserved.
+  TIP 4. Pool is not "hand" as most games because there is a game mechanic that simulates the player's actual hands.
+
+9. P1 plays some of its pool (maybe every card of it) and then finishes its TURN.
+10. Turn is the player's actions in a ROUND.
+10. Round is both player's turns.
+11. The 2nd 1st player (P2) draws 7 cards and then plays.
+12. Henceforth (3rd turn and beyond) turns are preceded by a standard draw, NOT by a solid number as 5 or 7 as before.
+13. A standard draw is when a player draws cards until it has 5 in its pool.
+14. Each player's pool has a limit of 10 cards.
+
+  TIP 5. Having 5 or more cards in pool clearly awards no draws in the beggining of a turn.
+
+15. Some cards are offensive and some are defensive, some are both.
+16. Being offensive enough will eventually FLIP your foe's "Heart" cards.
+17. Flipping a "Heart" is putting it facedown because all "Heart" cards start facing up and side by side.
+18. A player WINS when its foe has no more "Heart" cards to be flipped.
+19. Only 1 "Heart" may be flipped in a turn.
+20. A "Heart" gets flipped when an incoming attack is greater than the defense gathered.
+
+  TIP 6. In a non-standard game more or less "Heart" cards may be used as long as both players have the same amount.
+
+........................................................................................................................
+Discarding and destroying cards.
+
+1. Some cards get discarded as in most card games. They go to a pile called TRASH.
+2. Trash can be recycled into a new source when the source is emptied.
+3. Some cards get destroyed. They go to a pile called LIMBO.
+4. Cards in limbo are rarely used twice in a match because only special effects take cards out of it.
+5. If a player at one point has to draw cards but has none in both the SOURCE and the TRASH, it loses.
+
+........................................................................................................................
+Playing a simulation.
+
+1. Each card is unique, but their types have some intrinsic behaviours associated to them.
+2. There are 6 card types:
+
+  a. Attack.
+  b. Defense.
+  c. Scroll.
+  d. Terrain.
+  e. Assist.
+  f. Trap.
+
+3. Attacks, defenses and scrolls are IN LINE cards.
+4. Terrains, assists and traps are OFF LINE cards.
+5. To understand better these cards and their properties let's play a simulation:
+
+  a. Suppose it is the 1st turn of the match, and therefore P1 draws 5 cards.
+  b. P1 plays 1 attack card. Let's say this is an attack card named "Punch" and it says "+5 ATTACK".
+  c. Since this card is an attack, it is in line. It means it stays face up so both players can see it fully.
+  d. P1 then plays a "Strong Punch" that says "+10 ATTACK if after 'Punch'". It stays to the right of the first.
+  e. Since "Super Punch" is after "Punch", its effect is activated.
+  f. P1 then plays one last attack called "Final Punch" that says "+10 ATTACK if last card with 'Punch' in name".
+  g. This card is also (as for every in line card) placed to the right of the last.
+  h. It is clear now that a line is forming. This is the COMBO and the definition of what is to be an IN LINE card.
+  i. P1 still has 2 cards in pool, but decides not to play them.
+  j. Every card in a pool is retained for the player's next turn.
+  k. Now is the P2 turn. It sees the combo it has to respond to, 1 "Punch", 1 "Strong Punch" and 1 "Final Punch".
+  l. P2 draws 7 cards and will try to respond to the incoming 25 attack.
+  m. P2 plays 2 cards called "Synergy Energy" that say "+4 DEFENSE per 'Synergy Energy' in line".
+  n. P2, now with 16 DEFENSE, plays an exotic card called "Avoidance" that says "+10 DEFENSE".
+  o. P2 completely avoided the incoming 25 attack with 26 defense and now is free to invest in offensive behaviours.
+  p. P2 plays a terrain named "Mountain", it says "Cannot be destroyed in its 1st round."
+  q. There can only be 1 terrain active per match.
+  r. If either player plays a terrain in the future, "Mountain" will be destroyed in the process.
+  s. But because of its effect, neither player can destroy it this turn (P2's turn) or the next (P1's turn).
+  t. A player cannot destroy its own terrain just by wanting. A terrain can only be destroyed by another or some effect.
+  u. P2 also plays an exotic attack named "Single Axe Throw" that says "+20 ATTACK if only attack in line".
+  v. P2 passes the turn with still 2 cards in pool. Remember that henceforth every turn is preceded by a standard draw.
+  w. P1 now discards the last combo it made then draws 3 cards to complete 5 in pool.
+  x. P1 has a terrain called "Forest", but it cannot be played yet because of the "Mountain" effect.
+  y. P1 plays a scroll named "Swift Comeback" (scrolls are also in line) that says "Draw 1 card per 10 ATTACK taken".
+  z. P1 then draws 2 cards because it is taking 20 damage. P1 has now 6 cards in pool and "Swift Comeback" in line.
+  aa. P1 plays 1 assist named "Oak Bark Shield" that says "+2 DEFENSE per card in both pools".
+  ab. P1 plays 1 assist named "Stretch Club" that says "+1 ATTACK per every card in both lines".
+  ac. P1 now has used up all its 2 HAND slots. Assists can only be used if equipped to a hand.
+  ad. Some assists may use up to 2 hands. This is number is shown through a closed hand symbol in the card.
+  ae. If one assist is equipped on top of another, the older is destroyed, NOT discarded.
+  af. P1 plays 1 defense named "Elemental Aura" that says "+8 DEFENSE if at any terrain".
+  ag. P1 plays 1 defense named "Recurrent Aura" that says "+2 DEFENSE per defense card in line".
+  ah. P1 finishes its turn. Because both players have 2 cards in pool, "Oak Bark Shield" gives 8 defense.
+  ai. "Elemental Aura" gives another 8 defense and "Recurrent Aura" gives 4, for a total of 20 defense.
+  aj. P1 defended perfectly and attacked 7 from "Stretch Club".
+  ak. P2 now discards its combo and prepares to defend the 7 attack.
+  al. P2 makes a standard draw of 3 cards.
+  am. P2 plays an scroll named "Struggling Roots" that says "BURNER. Destroy any assist".
+  an. Only scrolls can be burners. It means the card is destroyed immediately after its use.
+  ao. P2 uses "Struggling Roots" to destroy "Stretch Club" and consequently has nothing more to defend.
+  ap. P2 still wants to get rid of "Oak Bark Shield", but it will have to use other methods not discussed before.
+  aq. Every assist has a SHIELD value. This value works mostly like the player's defense.
+  ar. For example, "Oak Bark Shield" has 8 in shield. This number is shown through a shield symbol in the card.
+  as. P2 says to P1 that its line will aim "Oak Bark Shield".
+  at. Players may claim aim at assists before, during or after building the combo.
+  au. Players may only claim aim at assists before passing the turn.
+  av. It means that P1 will have 8 extra defense next turn.
+  aw. It also means that if more than 8 attack is delivered by P2, "Oak Bark Shield" will be discarded in the process.
+  ax. Every defeated assist is discarded, NOT destroyed. Remember that replaced assists are destroyed.
+  ay. Assists may have the GUARDIAN status in text. It means it naturally stays in the way of any attack.
+  az. ...
