@@ -129,7 +129,7 @@ IV. Playing a simulation.
   an. P2 now discards its combo and prepares to defend the X attack (currently 3).
   ao. P2 makes a standard draw of 3 cards.
   ap. P2 plays an scroll named "Struggling Roots" that says "BURN. Destroy any assist".
-  aq. Only scrolls can burn. It means the card is destroyed immediately after its use.
+  aq. Only scrolls can burn. It means the card is destroyed after it is played in line and its effect happens.
   ar. P2 uses "Struggling Roots" to destroy "Stretch Club" and consequently has nothing more to defend.
   as. P2 still wants to get rid of "Oak Bark Shield", but it will have to use other methods not discussed before.
   at. Every assist has a SHIELD value. This value works mostly like the player's defense.
@@ -155,14 +155,23 @@ IV. Playing a simulation.
   bn. The "or" effect in assists may be reset every round.
   bo. Traps with "or" effects must be activated when either trigger is activated. They are hard to handle.
   bp. Some cards may have "and" effects along with "or" ones, but the "or" must always only feature 2 possibilities.
-  bq. On a last note, some cards will require special conditions in order to be played or to continue in play.
-  br. The need when played is defined in card under SUMMON and the need to exist under STAY.
-  bs. A card without its summon or stay requirements cannot be played.
-  bt. A card that looses its stay requirements is discarded, NOT destroyed.
-  bu. And well... This is it for now. If new features arise, this simulation shall grow to accommodate them.
+  bq. Some cards may have the CREEP status. It means it can be played in the foe's turn.
+  br. On a last note, some cards will require special conditions in order to be played or to continue in play.
+  bs. The need when played is defined in card under SUMMON and the need to exist under STAY.
+  bt. A card without its summon or stay requirements cannot be played.
+  bu. A card that looses its stay requirements is discarded, NOT destroyed.
+  bv. And well... This is it for now. If new features arise, this simulation shall grow to accommodate them.
 
 9. Players are able to handle every card in every own pile to count them.
 10. Players may read the cards at every own pile, except for the source (unless special effects are activated).
 11. Players may ask for their foe's pile amounts. Some cards may be based in such numbers.
-12. Don't lie and don't cheat.
+12. Players may NOT modify the order of cards in line, nor remove, nor replace cards in anyway without special effects.
+13. Once a card is played, it stays played.
+14. Remember combo lines always move from left to right.
+15. In case a card is played erroneously, 2 things may happen:
+
+  a. Honest mistake: The player may just apologize and reset the play.
+  b. Evil intentions: If they are proven (good players don't usually make mistakes), the cheater loses the match.
+
+16. Don't lie and don't cheat.
 
