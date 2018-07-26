@@ -58,7 +58,7 @@ III. Discarding and destroying cards.
 5. If a player at one point has to draw cards but has none in both the SOURCE and the TRASH, it loses.
 
 ........................................................................................................................
-IV. Playing a simulation.
+IV. Playing a simulation (and reading a bunch of rules).
 
 1. Each card is unique, but their types have some intrinsic behaviours associated to them.
 2. There are 6 card types:
@@ -85,7 +85,7 @@ IV. Playing a simulation.
   h. Metal => Red     => Cave.
 
 7. Schools are important to some effects, but schools don't carry special mechanics, so they won't be featured below.
-8. To understand better these cards and their properties let's play a simulation:
+8. To understand better these cards and their properties let's play a simulation with some standard (or not) cards:
 
   a. Suppose it is the 1st turn of the match, and therefore P1 draws 5 cards.
   b. P1 plays 1 attack card. Let's say this is an attack card named "Punch" and it says "+5 ATTACK".
@@ -155,25 +155,48 @@ IV. Playing a simulation.
   bn. The "or" effect in assists may be reset every round.
   bo. Traps with "or" effects must be activated when either trigger is activated. They are hard to handle.
   bp. Some cards may have "and" effects along with "or" ones, but the "or" must always only feature 2 possibilities.
-  bq. Some scroll cards may have the CREEP status. It means it can be played in the foe's turn.
-  br. On a last note, some cards will require special conditions in order to be played or to continue in play.
-  bs. The need when played is defined in card under SUMMON and the need to exist under STAY.
-  bt. A card without its summon or stay requirements cannot be played.
-  bu. A card that looses its stay requirements is discarded, NOT destroyed.
-  bv. And well... This is it for now. If new features arise, this simulation shall grow to accommodate them.
+  bq. On a last note, some cards will require special conditions in order to be played or to continue in play.
+  br. The need when played is defined in card under SUMMON and the need to exist under STAY.
+  bs. A card without its summon or stay requirements cannot be played.
+  bt. A card that looses its stay requirements is discarded, NOT destroyed.
+  bu. This simulation is a WIP and will still be upgraded given time.
 
-9. Players are able to handle every card in every own pile to count them.
-10. Players may read the cards at every own pile, except for the source (unless special effects are activated).
-11. Players may ask for their foe's pile amounts. Some cards may be based in such numbers.
-12. Players may NOT modify the order of cards in line, nor remove, nor replace cards in anyway without special effects.
-13. Once a card is played, it stays played.
-14. Remember combo lines always move from left to right.
-15. Some cards may have the DRAFT status. It defines what the card needs in a deck to be able to be in said deck.
-16. The player might demand to verify the DRAFT requirements of its foe's cards at the end of a game.
-17. When a player demands to see the other's deck, the player is only required to present it if in a safe situation.
-18. I don't support playing in weird places where you might get in trouble or get robbed or even worse. Be smart.
-19. If a player erroneously DRAFTED a card and played this way, said player loses.
-20. If a player erroneously PLAYED a card, said player loses.
-21. In case its just a friendly game, both players may agree to reset the error and go on accordingly with the rules.
-22. Don't lie and don't cheat.
+........................................................................................................................
+V. Drafting.
+
+1. Some cards may have the DRAFT status. It defines what the card needs in a deck to be able to be in said deck.
+2. The player might demand to verify the DRAFT requirements of its foe's cards at the end of a game.
+3. When a player demands to see the other's deck, the player is only required to present it if in a safe situation.
+4. I don't support playing in weird places where you might get in trouble or get robbed or even worse. Be smart.
+
+........................................................................................................................
+VI. Standard manners.
+
+1. Players are able to handle every card in every own pile to count them.
+2. Players may read the cards at every own pile, except for the source (unless special effects are activated).
+3. Players may ask for their foe's pile amounts. Some cards may be based in such numbers.
+4. Players may NOT modify the order of cards in line, nor remove, nor replace cards in anyway without special effects.
+5. Once a card is played, it stays played.
+6. Remember combo lines always move from left to right.
+7. If a player erroneously DRAFTED a card and played this way, said player loses.
+8. If a player erroneously PLAYED a card, said player loses.
+9. In case its just a friendly game, both players may agree to reset the error and go on accordingly with the rules.
+10. Don't lie and don't cheat.
+
+........................................................................................................................
+VII. The "Mountain" problem.
+
+1. The "Mountain" effect is "Cannot be destroyed in its 1st round".
+2. This would mean that another terrain could be placed and just not destroy the "Mountain".
+3. The statement above is only NOT true because you have to think of slots.
+4. There is only 1 terrain slot in game, and since "Mountain" cannot leave it in its 1st round, none may enter.
+5. This thought process should be applied when such circumstances arise.
+
+........................................................................................................................
+VIII. New rules.
+
+1. Things in this section are not yet reported in the combat simulation (part IV), but they are valid!
+2. Some scroll cards may have the CREEP status. It means it can be played in the foe's turn.
+3. Some in line cards may have the FINISH status. It means no card can be placed AFTER it in a combo line.
+4. Some in line cards may have the START status. It means no card can be placed BEFORE it in a combo line.
 
