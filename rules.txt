@@ -200,3 +200,20 @@ VIII. New rules.
 3. Some in line cards may have the FINISH status. It means no card can be placed AFTER it in a combo line.
 4. Some in line cards may have the START status. It means no card can be placed BEFORE it in a combo line.
 
+........................................................................................................................
+IX. Ideas.
+
+1. Each element could have its own main strategy:
+
+  a. Rock => Attack.
+  b. Earth => Long term.
+  c. Water => Low risk and low pay.
+  d. Ice => Trap.
+  e. Air => Defense.
+  f. Spark => Short term.
+  g. Fire => High risk and high pay.
+  h. Metal => Assist.
+
+2. When a player reaches 10 cards in hand and is forced to draw, said cards are destroyed instead of being discarded.
+3. Maybe a card (a terrain perhaps) is more suitable to make the rule above work.
+
