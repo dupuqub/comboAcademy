@@ -199,9 +199,19 @@ VIII. New rules.
 2. Some scroll cards may have the CREEP status. It means it can be played in the foe's turn.
 3. Some in line cards may have the FINISH status. It means no card can be placed AFTER it in a combo line.
 4. Some in line cards may have the START status. It means no card can be placed BEFORE it in a combo line.
+5. A complete card is a card that .
 
 ........................................................................................................................
-IX. Ideas.
+IX. Complete cards.
+
+1. A complete card is one that is completely activated, it means its effects are all in working.
+2. "Or" effect cards are naturally impossible to have all effects working
+3. So only 1 activated effect in a "or" card means it is complete.
+4. There may be some complex "or" cards that have mutual effects in tandem (effects not depending on the "or" choice).
+5. Such a card would have to attend such mutual effects as well to be considered complete.
+
+........................................................................................................................
+X. Ideas.
 
 1. Each element could have its own main strategy:
 
@@ -216,4 +226,6 @@ IX. Ideas.
 
 2. When a player reaches 10 cards in hand and is forced to draw, said cards are destroyed instead of being discarded.
 3. Maybe a card (a terrain perhaps) is more suitable to make the rule above work.
+4. Defenses followed by attacks or other non-standard sequences.
+5. Multi-school sequences.
 
