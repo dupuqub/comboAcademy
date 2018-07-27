@@ -159,7 +159,8 @@ IV. Playing a simulation (and reading a bunch of rules).
   br. The need when played is defined in card under SUMMON and the need to exist under STAY.
   bs. A card without its summon or stay requirements cannot be played.
   bt. A card that looses its stay requirements is discarded, NOT destroyed.
-  bu. This simulation is a WIP and will still be upgraded given time.
+  bu. And well... That's it, folks.
+  bv. These are not all the features, but a general glance at a deeper game flow.
 
 ........................................................................................................................
 V. Drafting.
