@@ -194,16 +194,7 @@ VII. The "Mountain" problem.
 5. This thought process should be applied when such circumstances arise.
 
 ........................................................................................................................
-VIII. New rules.
-
-1. Things in this section are not yet reported in the combat simulation (part IV), but they are valid!
-2. Some scroll cards may have the CREEP status. It means it can be played in the foe's turn.
-3. Some in line cards may have the FINISH status. It means no card can be placed AFTER it in a combo line.
-4. Some in line cards may have the START status. It means no card can be placed BEFORE it in a combo line.
-5. A complete card is a card that .
-
-........................................................................................................................
-IX. Complete cards.
+VIII. Complete cards.
 
 1. A complete card is one that is completely activated, it means its effects are all in working.
 2. "Or" effect cards are naturally impossible to have all effects working
@@ -212,9 +203,14 @@ IX. Complete cards.
 5. Such a card would have to attend such mutual effects as well to be considered complete.
 
 ........................................................................................................................
-X. Ideas.
+IX. New rules.
 
-1. Each element could have its own main strategy:
+1. Things in this section are not yet reported in the combat simulation (part IV), but they are valid!
+2. Some scroll cards may have the CREEP status. It means it can be played in the foe's turn.
+3. Some in line cards may have the FINISH status. It means no card can be placed AFTER it in a combo line.
+4. Some in line cards may have the START status. It means no card can be placed BEFORE it in a combo line.
+5. A complete card is a card that .
+6. Each element could have its own main strategy:
 
   a. Rock => Attack.
   b. Earth => Long term.
@@ -224,6 +220,9 @@ X. Ideas.
   f. Spark => Short term.
   g. Fire => High risk and high pay.
   h. Metal => Assist.
+
+........................................................................................................................
+X. Ideas.
 
 2. When a player reaches 10 cards in hand and is forced to draw, said cards are destroyed instead of being discarded.
 3. Maybe a card (a terrain perhaps) is more suitable to make the rule above work.
