@@ -228,4 +228,5 @@ X. Ideas.
 3. Maybe a card (a terrain perhaps) is more suitable to make the rule above work.
 4. Defenses followed by attacks or other non-standard sequences.
 5. Multi-school sequences.
+6. A card that works after some, prohibits any other card in line.
 
