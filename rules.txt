@@ -209,7 +209,7 @@ IX. New rules.
 2. Some scroll cards may have the CREEP status. It means it can be played in the foe's turn.
 3. Some in line cards may have the FINISH status. It means no card can be placed AFTER it in a combo line.
 4. Some in line cards may have the START status. It means no card can be placed BEFORE it in a combo line.
-5. A complete card is a card that .
+5. The attacker chooses which guardian (card with GUARD status) will take the hit first in case the foe has 2 guardians.
 6. Each element could have its own main strategy:
 
   a. Rock => Attack.
