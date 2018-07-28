@@ -114,8 +114,8 @@ IV. Playing a simulation (and reading a bunch of rules).
   y. P1 plays a scroll named "Swift Comeback" that says "PHASE. Draw 1 card per 10 ATTACK taken".
   z. P1 then draws 2 cards because it is taking 20 damage. P1 has now 6 cards in pool and "Swift Comeback" in line.
   aa. Having the phase status means that every time the card gets DISCARDED it goes to the bottom of the source instead.
-  ab. P1 plays 1 assist named "Oak Bark Shield" that says "CRUMBLE. +2 DEFENSE per card in both pools".
-  ac. The crumble status means whenever the card would get discarded, it gets destroyed instead.
+  ab. P1 plays 1 assist named "Oak Bark Shield" that says "DECAY. +2 DEFENSE per card in both pools".
+  ac. The decay status means whenever the card would get discarded, it gets destroyed instead.
   ad. P1 plays 1 assist named "Stretch Club" that says "+1 ATTACK per every card in both lines".
   ae. P1 now has used up all its 2 HAND slots. Assists can only be used if equipped to a hand.
   af. Some assists may use up to 2 hands. This number is shown through a closed hand symbol in the card.
@@ -203,7 +203,18 @@ VIII. Complete cards.
 5. Such a card would have to attend such mutual effects as well to be considered complete.
 
 ........................................................................................................................
-IX. New rules.
+IX. Consuming cards.
+
+1. The status CONSUME means such a card will gather others and place them beneath itself.
+2. Play consumed cards showing only their titles so its easier to count them.
+3. These cards beneath the consumer are called consumed.
+4. CONSUME effects are often, if not always, about consumed cards.
+5. Every consumed card is DESTROYED when the round ends, except under special effects.
+6. Consumed cards are effectless unless under special effects.
+7. Consumed cards that are active during the process are played in line, slightly (1/4 of the card) under its consumer.
+
+........................................................................................................................
+X. New rules.
 
 1. Things in this section are not yet reported in the combat simulation (part IV), but they are valid!
 2. Some scroll cards may have the CREEP status. It means it can be played in the foe's turn.
@@ -222,7 +233,7 @@ IX. New rules.
   h. Metal => Assist.
 
 ........................................................................................................................
-X. Ideas.
+XI. Ideas.
 
 2. When a player reaches 10 cards in hand and is forced to draw, said cards are destroyed instead of being discarded.
 3. Maybe a card (a terrain perhaps) is more suitable to make the rule above work.
