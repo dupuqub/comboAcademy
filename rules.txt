@@ -208,10 +208,12 @@ IX. Consuming cards.
 1. The status CONSUME means such a card will gather others and place them beneath itself.
 2. Play consumed cards showing only their titles so its easier to count them.
 3. These cards beneath the consumer are called consumed.
-4. CONSUME effects are often, if not always, about consumed cards.
-5. Every consumed card is DESTROYED when the round ends, except under special effects.
-6. Consumed cards are effectless unless under special effects.
-7. Consumed cards that are active during the process are played in line, slightly (1/4 of the card) under its consumer.
+4. CONSUME effects are often, if not always, about the amount of consumed cards.
+5. Every consumed card is DISCARDED when the round ends, except under special effects.
+6. Consumed cards are effectless except for some special effects.
+7. For example, some cards might get played when getting consumed (not getting consumed after all).
+8. Other cards might have a variety of events that trigger when the card is consumed.
+9. When placing a consumed card beneath another, let it show their titles, schools, type, shield and hands.
 
 ........................................................................................................................
 X. New rules.
