@@ -196,11 +196,11 @@ VII. The "Mountain" problem.
 ........................................................................................................................
 VIII. Complete cards.
 
-1. A complete card is one that is completely activated, it means its effects are all in working.
-2. "Or" effect cards are naturally impossible to have all effects working
-3. So only 1 activated effect in a "or" card means it is complete.
+1. A complete card is one that is completely activated, it means its effects are all working.
+2. "Or" effect cards are naturally impossible to have all effects working.
+3. Therefore only 1 activated effect in an "or" card means it is complete.
 4. There may be some complex "or" cards that have mutual effects in tandem (effects not depending on the "or" choice).
-5. Such a card would have to attend such mutual effects as well to be considered complete.
+5. Such a card would have to also attend these mutual effects to be considered complete.
 
 ........................................................................................................................
 IX. Consuming cards.
